@@ -1,0 +1,269 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/****************************header****************************/
+header {
+    background-color: red;
+    overflow: hidden;
+    display: flex;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    height: 3.5rem;/*65*/
+    width: 100%;
+}
+/*========nav-menu========*/
+.icon-menu{
+    width: 2.4rem;
+    height: 2.4rem;
+    border-radius: 50%;
+    margin: .5rem 0 0 .4rem ;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: .3s ease;
+}
+    .icon-menu:hover{
+        background-color: rgba(73, 72, 72, 0.733);
+    }
+
+.nav_menu {
+    width: 12rem;
+}
+
+.menu_header {
+    background-color: rgb(218, 13, 13);
+    top: 0;
+    margin-top: 3.49rem;/*50*/
+    padding-top: 0.3rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+
+    width: 12rem;/*150*/
+    height: 100%;
+}
+    .menu_header.close {
+        width: 3.2rem;
+    }
+
+.menu_header ul{
+    list-style-type: none;
+    width: 90%;
+}
+.menu_option {
+    border-radius: 0.8rem;
+    height: 3rem;
+
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    text-decoration: none;
+    color: black;
+    padding: 0 .5rem;
+
+    transition: 0.1s ease-out;
+}
+    .menu_option:hover{
+        background-color: rgba(73, 72, 72, 0.733);
+    }
+
+.menu_option span.close{
+    display: none;
+}
+
+    /**pruebo con menu-option close para texto abajo de icon**/
+    .menu_option.close{
+        height: 3.5rem;
+        flex-direction: column;
+        justify-content: center;
+        overflow: hidden;
+        span{
+            font-size: .6rem;
+        }
+    }
+/****/
+.icono{
+    width: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.icon-menu-li {
+    font-size: 1.2rem;
+}
+    .icon-menu-li.close{
+        font-size: 1.5rem;
+    }
+
+/*========sesion-nav========*/
+
+#nav-sesion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: .2rem;
+    border-top: solid 1px black;
+    border-bottom: solid 1px black;
+    height: 7rem;
+}
+
+#nav-sesion .texto{
+    width: 85%;
+    font-size: .8rem;
+}
+
+#nav-sesion.close{
+    display: none;
+}
+
+/*========programadores========*/
+#nav-programadores {
+    display: flex;
+    flex-direction: column;
+
+    padding-top: .5rem;
+    padding-bottom: .3rem;
+    border-bottom: solid 1px;
+}
+#nav-programadores.close {
+    display: none;
+}
+
+#nav-programadores > .texto {
+    margin: auto auto .2rem .6rem;
+}
+#nav-programadores > .menu_option {
+    height: 2.4rem;
+    span{
+        margin-left: .5rem;
+    }
+}
+
+#nav-programadores > .menu_option > .icono {
+    overflow: hidden;
+    img{
+        width: 100%;
+        height: auto;
+        border-radius: .7rem;
+    }
+}
+
+/*========footer-menu========*/
+
+#miFooter {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+    height: 5rem;
+    font-size: .7rem;
+}
+
+#miFooter.close {
+    display: none;
+}
+
+/*========Titulo========*/
+
+.titulo-header{
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.titulo{
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+
+    height: 2.5rem;
+}
+.logoMate {
+    width: auto;
+    height: 100%;    
+
+    animation: rotateLeftRight 3s;
+    animation-iteration-count: 1;
+    animation-delay: 2s;
+}
+
+    .logoMate:hover {
+        -webkit-animation-play-state: running;
+        animation-play-state: running;
+        animation: rotateLeftRight 2s infinite;
+    }
+
+/* Animación */
+@keyframes rotateLeftRight {
+    0% {
+        transform: rotate(5deg); /* Gira 5 grados a la derecha */
+    }
+    50% {
+        transform: rotate(-5deg); /* Gira 5 grados a la izquierda */
+    }
+    100% {
+        transform: rotate(5deg); /* Vuelve a girar 5 grados a la derecha */
+    }
+}
+
+
+/*========sesion========*/
+
+.sesion {
+    margin-right: 1rem;
+    width: 12rem;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.sesion-botton {
+    text-decoration: none;
+    border: 1px solid;
+    border-radius: 1rem;
+    width: 5.2rem;
+    height: 1.8rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+    .sesion-botton:hover {
+        background-color: rgba(77, 202, 243, 0.705);
+    }
+
+.icono-sesion{
+    margin-right: .2rem;
+}
+
+/****************************main****************************/
+
+main {
+    margin-top: 3.5rem;
+    margin-left: 12rem;
+}
+
+    main.close {
+        margin-left: 3.2rem;
+    }
+
+/****************************footer****************************/
+/*esta en el nav del menu*/
