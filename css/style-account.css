@@ -1,0 +1,111 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    background-color: #f0f4f9;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alto-ancho {           /*medidas del recuadro*/
+    height: 33rem;
+    width: 58rem;
+
+    padding: 3rem 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: #f0f4f9;
+}
+
+.pie {                  /*aca esta el boton volver*/
+    width: 100%;
+    height: 4rem;
+    padding-right: 1rem;
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.logo-cuenta {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
+    background-color: white;
+    padding: 2rem;
+    border-radius: 1.5rem;
+}
+
+.logo {
+    width: 50%;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+
+    margin-bottom: 1rem;
+}
+.titulo img {       /*darle animacion del menu.css que solo se mueva en hover*/
+    width: 3rem;
+    height: auto;
+}
+
+.cuenta {
+    padding-top: 4rem; /*altura del titulo y espacio*/
+    width: 50%;
+}
+
+/*adaptacion a pantallas de tablet y celular*/
+
+@media(max-width: 960px) {
+    .alto-ancho {
+        height: 100vh;
+        width: 100%;
+    
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    
+        border: solid 1px;
+        background-color: #f0f4f9;
+    }
+    .logo-cuenta { 
+        border-radius: 0;
+    }
+    .pie {
+        background-color: white;
+    }
+}
+
+@media(max-width: 600px) {
+
+    .logo-cuenta {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    
+        background-color: white;
+        padding: 2rem;
+        border-radius: 1.5rem;
+
+        .logo{
+            width: auto;
+        }
+        .cuenta{
+            width: 100%;
+        }
+    }
+}
