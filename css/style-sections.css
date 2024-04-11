@@ -1,0 +1,50 @@
+.sections {
+    border: solid 1px;
+    width: 100%;
+}
+.a-video{
+    text-decoration: none;
+    color: black;
+}
+
+.cuadro-contenedor {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.video-contenedor {
+    width: 400px;/*ancho de video*/
+    height: auto;
+}
+
+.cuadro-video {
+    border-radius: .8rem;
+    height: 220px;/*alto de video*/
+    width: auto;
+
+    overflow: hidden;
+}
+
+.details {
+    height: 2.5rem;
+    overflow: hidden;
+    padding: 0.3rem 1rem;
+}
+
+.details h3{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.caja-button-centrado{
+    display: flex;
+}
+.button-mas {
+    border-radius: 1rem;
+    height: 2rem;
+    width: 5rem;
+    margin: 5px auto;
+    cursor: pointer;
+}
