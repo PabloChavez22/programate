@@ -41,6 +41,10 @@
 .caja-button-centrado{
     display: flex;
 }
+.ocultos {
+    display: none;
+}
+
 .button-mas {
     border-radius: 1rem;
     height: 2rem;
