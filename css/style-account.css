@@ -66,6 +66,9 @@ body {
     width: 50%;
 }
 
+.oculto {
+    display: none;
+}
 /*adaptacion a pantallas de tablet y celular*/
 
 @media(max-width: 960px) {
