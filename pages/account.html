@@ -23,7 +23,7 @@
                     <div class="titulo">
                         <h1>Progra</h1><img src="../static/img/logoMate.jpg" alt="logo-programate">
                     </div>
-                    <h2>Iniciar sesion o crear cuenta</h2>
+                    <h2 class="titulo-h2">Iniciar sesion</h2>
                 </div>
 
                 <div class="cuenta">
@@ -31,18 +31,15 @@
                     <p>Ingresar</p>
                     <!--implementar fontawsome para imagen sesion. ya está el script en head-->
 
-                    <!--hacer boton clicleable 'registrarse', que muestre el formulario crear cuenta 
-                        y oculte ingresar-->
-                    <p>No tiene cuenta, Registrarse.</p>
-                    <!--crear formulario para crear cuenta con opciones (crear y cancelar)js-->
-                    <!--crear .js que tome (crear y cancelar) 'crear' manda formulario y 'cancelar' 
-                        oculta formulario registrar y vuelve a mostrar ingresar-->
+                    <p>No tiene cuenta,<a href="#" class="btn-registrarse">Registrarse</a>.</p>
                 </div>
-                <!--
-                En esta parte crear un div que contenga un formulario, el cual pida los datos para crear una cuenta.
-                el formulario debe tener... elementos requeridos y otros opcionales.
-                -->
-
+                
+                <div class="caja_formulario oculto">
+                    <!--aca agregar el formulario-->
+                    <p>Aca va el formulario.</p>
+                    <p>Pidiendo obligatorio:<br>*Nombre<br>*Apellido<br>*mail<br>*contraseña<br><br>Tambien tipo opcionales:<br>*Deben ser:<br>Sean botones de eleccion y espacio para rellenar.</p>
+                    <button class="btn-cancelar-formulario">Cancelar</button>
+                </div>
             </div>
 
             <div class="pie">
