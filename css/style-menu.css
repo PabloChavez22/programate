@@ -7,7 +7,7 @@
 
 /****************************header****************************/
 header {
-    background-color: red;
+    background-color: var(--color-menu);
     overflow: hidden;
     display: flex;
 
@@ -41,7 +41,7 @@ header {
 }
 
 .menu_header {
-    background-color: rgb(218, 13, 13);
+    background-color: var(--color-sub-menu);
     top: 0;
     margin-top: 3.49rem;/*50*/
     padding-top: 0.3rem;
