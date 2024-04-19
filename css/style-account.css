@@ -7,7 +7,7 @@
 
 body {
     height: 100vh;
-    background-color: #f0f4f9;
+    background-color: var(--color-sesion-fondo);
 
     display: flex;
     align-items: center;
@@ -23,17 +23,23 @@ body {
     flex-direction: column;
     justify-content: center;
 
-    background-color: #f0f4f9;
+    background-color: var(--color-sesion-fondo);
 }
 
-.pie {                  /*aca esta el boton volver*/
+.pie {                  
     width: 100%;
     height: 4rem;
     padding-right: 1rem;
 
     display: flex;
-    flex-direction: row-reverse;
+    flex-direction: row;
     align-items: center;
+    justify-content: flex-end;
+}
+
+.pie a{    /*aca esta el boton volver*/
+    margin: 0 .2rem;
+    text-decoration: none;
 }
 
 .logo-cuenta {
@@ -56,9 +62,31 @@ body {
 
     margin-bottom: 1rem;
 }
-.titulo img {       /*darle animacion del menu.css que solo se mueva en hover*/
+
+.titulo h1 {
+    color: var(--color-menu); /*agrego el color de la img*/
+}
+
+.titulo img {       
     width: 3rem;
     height: auto;
+    margin-bottom: .5rem;
+
+    animation: rotateLeftRight 3s;
+    animation-iteration-count: 5;
+    animation-delay: 2s;
+}
+/* Animación solo 5 iteraciones */
+@keyframes rotateLeftRight {
+    0% {
+        transform: rotate(5deg); /* Gira 5 grados a la derecha */
+    }
+    50% {
+        transform: rotate(-5deg); /* Gira 5 grados a la izquierda */
+    }
+    100% {
+        transform: rotate(5deg); /* Vuelve a girar 5 grados a la derecha */
+    }
 }
 
 .cuenta {
@@ -82,7 +110,7 @@ body {
         justify-content: center;
     
         border: solid 1px;
-        background-color: #f0f4f9;
+        background-color: var(--color-sesion-fondo);
     }
     .logo-cuenta { 
         border-radius: 0;
