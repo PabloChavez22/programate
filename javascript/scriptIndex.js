@@ -26,4 +26,28 @@ function alDarClick (){
     bottonPadre.classList.add("ocultos");
     bottonPadre.classList.remove("caja-button-centrado");
 }
+
+const btnC = document.querySelector("#button-js");
+const elementPadre3 = document.querySelector("#contenido-jscript");
+const bottonPadre3 = document.querySelector("#botton-padre1");
+//creo nodos.
+const etU = document.createElement('a');
+const etV = document.createElement('a');
+const etW = document.createElement('a');
+
+
+btnC.addEventListener('click',function(){
+    etU.innerHTML = '<div class="video-contenedor"><div class="cuadro-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/2SetvwBV-SU?si=McXco9G64tSCEZWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="details"><h3>Curso JavaScript: 1. Introducción - #jonmircha</h3></div></div>';
+    etV.innerHTML = '<div class="video-contenedor"><div class="cuadro-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/quJzdnXuNDc?si=U79ftuVaU_K8Epbh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="details"><h3>How to Learn Javascript in 2023 (From ZERO)</h3></div></div>';
+    etW.innerHTML = '<div class="video-contenedor"><div class="cuadro-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/c-I5S_zTwAc?si=9ITFIcfm1RM4WPZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="details"><h3>Learn JAVASCRIPT in just 5 MINUTES (2020)</h3></div></div>';
+    //agrego nodos.
+    elementPadre3.append(etU,etV,etW);
+    //atributos
+    etU.setAttribute('class', 'a-video');
+    etV.setAttribute('class', 'a-video');
+    etW.setAttribute('class', 'a-video');
+
+    bottonPadre3.classList.add("ocultos");
+    bottonPadre3.classList.remove("caja-button-centrado");
+});
 //mientras veo como utilizar la api de youtube.
