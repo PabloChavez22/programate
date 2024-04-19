@@ -1,0 +1,27 @@
+/*********colores**********/
+:root {
+    --color-menu: #FF0000; /* Defino variable con valor hexadecimal */
+    --color-sub-menu: #B30000;
+
+    --color-sesion-fondo:#f0f4f9;/*gris de fondo de sesion*/
+}
+/*
+h1 {
+    color: var(--mi-color); // Forma de utilizar la variable en lugar del color directamente.
+}
+// https://color.adobe.com/es/create/color-wheel
+// utilizando tipos de colores segun el color-wheel de clase 6.
+*/
+
+/*********fuentes**********/
+h1, h2 {
+    font-family: Century Gothic, CenturyGothic, AppleGothic, sans-serif;
+}
+
+h3,h4,h5,h6 {
+    font-family: Cambria, Georgia, serif;
+}
+
+p, a ,i,span {
+    font-family: Cambria, Georgia, serif;
+}
