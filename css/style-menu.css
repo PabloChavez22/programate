@@ -80,6 +80,10 @@ header {
         background-color: rgba(73, 72, 72, 0.733);
     }
 
+    .menu_option.ok:hover{
+            background-color: rgba(77, 202, 243, 0.705); /*despues de agregar lnkdin usar*/
+    }
+
 .menu_option span.close{
     display: none;
 }
@@ -147,19 +151,11 @@ header {
     margin: auto auto .2rem .6rem;
 }
 #nav-programadores > .menu_option {
-    height: 2.4rem;
-    span{
-        margin-left: .5rem;
-    }
+    height: 2.4rem;    /*quitado el span el icono ya deja espacio*/
 }
 
 #nav-programadores > .menu_option > .icono {
-    overflow: hidden;
-    img{
-        width: 100%;
-        height: auto;
-        border-radius: .7rem;
-    }
+    font-size: 1.5rem;   /*modificado para linkedin*/
 }
 
 /*========footer-menu========*/
