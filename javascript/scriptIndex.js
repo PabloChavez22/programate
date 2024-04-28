@@ -51,3 +51,9 @@ btnC.addEventListener('click',function(){
     bottonPadre3.classList.remove("caja-button-centrado");
 });
 //mientras veo como utilizar la api de youtube.
+
+/*******************publicidad**************************/
+setTimeout(function () {
+    const publicidad = document.querySelector('#publicidad-page');
+    publicidad.classList.add("ocultos");
+},9000);
