@@ -45,6 +45,47 @@
                 
                 <div class="caja_formulario oculto">
                     <!--aca agregar el formulario-->
+                    <form action="" id="crear-cuenta" class="datos-form">
+                        <fieldset class="datos-form">
+                            <legend>Datos personales</legend>
+                        
+                            <label for="name">Ingrese su nombre</label>
+                            <input type="text" id="name" name="name" maxlength="27" required placeholder="Nombre">
+                            
+                            <label for="surname">Ingrese su apellido</label>
+                            <input type="text" id="surname" name="surname" maxlength="27" required placeholder="Apellido">
+                            
+                            <label for="fecha-nacimiento">Ingrese fecha de nacimiento</label>
+                            <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" maxlength="27">
+                            <div class="genero">
+                                <legend>Genero</legend>
+                                <label>F<input type="radio" name="option"></label>
+                                <label>M<input type="radio" name="option"></label>
+                            </div>
+                                
+                        </fieldset>
+                        <label for="email">Ingrese su email</label>
+                        <input type="email" id="email" name="email" maxlength="27" required placeholder="example@email.com">
+                        
+                        <label for="passw">Crear contraseña</label>
+                        <input type="password" id="passw" name="passw" maxlength="27" required placeholder="***">
+                        
+                        <label for="passw-two">Repita contraseña</label>
+                        <input type="password" id="passw-two" name="passw-two" maxlength="27" required placeholder="***">
+
+                        <div class="terminos">
+                            <input type="checkbox" id="notificaciones" name="notificaciones" checked="checked" >
+                            <label for="notificaciones">Recibir notificaciones</label>
+                        </div>
+                        <div class="terminos">
+                            <input type="checkbox" id="check" name="check" required>
+                            <label for="check">Acepto los terminos y condiciones.</label>
+                        </div>
+                        
+                        <input type="submit" value="Crear" class="submit">
+                        
+                    </form>
+                    <!--termina form-->
                     <button class="btn-cancelar-formulario">Cancelar</button>
                 </div>
             </div>
