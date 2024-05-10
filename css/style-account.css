@@ -197,3 +197,71 @@ body {
         background-color: green;     
         color: white;   
     }
+/****************************************************
+*  Form              crear cuenta                   *
+****************************************************/
+.caja_formulario{
+    overflow: overlay;
+}
+.datos-form{
+    display: flex;
+    flex-wrap: wrap;
+    
+    flex-direction: column;
+    overflow: hidden;
+
+}
+
+.datos-form input{
+    margin: .2rem 0 .3rem 0;
+    padding: .3rem;
+    padding-left: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: lightgrey;
+    font-size: large;
+}
+.genero{
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.terminos{
+    display: flex;
+}
+
+.datos-form .submit{
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 4.8px;
+
+    background-color: lightgreen;
+    border: solid 3px lightgreen;
+    cursor: pointer;
+    margin: 0 auto;
+    font-family: Cambria, Georgia, serif;
+    font-size: medium;
+}
+     .submit:hover{
+        background-color: green;     
+        color: white;   
+    }
+
+.btn-cancelar-formulario{
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 4.8px;
+
+    background-color: lightcoral;
+    border: solid 3px lightcoral;
+    border-radius: 2rem;
+    cursor: pointer;
+    display: flex;
+    margin: 4px auto;
+    font-family: Cambria, Georgia, serif;
+    font-size: medium;
+}
+    .btn-cancelar-formulario:hover{
+        background-color: red;
+        color: white;
+    }
