@@ -93,6 +93,9 @@ body {
     padding-top: 4rem; /*altura del titulo y espacio*/
     width: 50%;
 }
+.cuenta p{
+    text-align: right;
+    margin-top: 10px;
 
 .oculto {
     display: none;
@@ -140,3 +143,57 @@ body {
         }
     }
 }
+
+/****************************************************
+*  Form                                             *
+****************************************************/
+.ingresar{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    overflow: hidden;
+
+    width: 100%;
+    height: auto;
+}
+
+.user{
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 3.5rem;
+    height: 3.5rem;
+    border: solid 3px;
+    border-radius: 2rem;   
+    margin: 0 auto;
+}
+.user i{
+    font-size: xxx-large;
+}
+#inicio-sesion input{
+    margin: .2rem 0 .3rem 0;
+    padding: .3rem;
+    padding-left: 1rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: lightgrey;
+    font-size: large;
+}
+#inicio-sesion .submit{
+    width: fit-content;
+    width: -moz-fit-content;
+    padding: 4.8px;
+
+    background-color: lightgreen;
+    border: solid 3px lightgreen;
+    cursor: pointer;
+    margin: 0 auto;
+    font-family: Cambria, Georgia, serif;
+    font-size: medium;
+}
+    #inicio-sesion .submit:hover{
+        background-color: green;     
+        color: white;   
+    }
