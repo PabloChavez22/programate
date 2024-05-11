@@ -212,7 +212,7 @@ body {
 
 }
 
-.datos-form input{
+.datos-form input, select{
     margin: .2rem 0 .3rem 0;
     padding: .3rem;
     padding-left: 1rem;
@@ -224,12 +224,20 @@ body {
 .genero{
     display: flex;
     flex-wrap: wrap;
-
+    align-items: center;
 }
+.genero label {
+    margin: 0 .2rem 0 .2rem;
+}
+
 .terminos{
     display: flex;
 }
 
+.datos-form fieldset {
+    padding: 2%;
+    margin-bottom: .5rem;
+}
 .datos-form .submit{
     width: fit-content;
     width: -moz-fit-content;
