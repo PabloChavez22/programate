@@ -5,22 +5,18 @@ const r2 = 'css';
 const r3 = 'javascript';
 
 async function obtenerVideos(casoq) {
-  const padre = document.getElementById('padre');
+    const tipo = casoq;
+    const cantidadVideos = 3;
 
-  try {
-      const apiKey = 'AIzaSyAnhgNL3-Jj1mksQcI-ifnTGNLERZNTmSk';
-      const response = await axios.get('https://www.googleapis.com/youtube/v3/search', {
-          params: {
-              q: casoq,
-              type: 'video',
-              key: apiKey,
-          },
-      });
+    try {
+        // Realiza la búsqueda de videos en YouTube utilizando Axios
+        const apiKey = 'AIzaSyAnhgNL3-Jj1mksQcI-ifnTGNLERZNTmSk';
+        const url = `https://www.googleapis.com/youtube/v3/search?part=snippet&q=${tipo}&maxResults=${cantidadVideos}&key=${apiKey}`;
+        const response = await axios.get(url);
+        const videos = response.data.items;
 
-      const videos = response.data.items;
-
-      // Crear tres divs hijos con título y video
-      for (let i = 0; i < 3; i++) {
+        // Muestra los videos y títulos en los divs correspondientes
+        videos.forEach((video, index) => {          
           const divHijo = document.createElement('div');
           const titulo = document.createElement('div');
           const video = document.createElement('div');
@@ -28,16 +24,16 @@ async function obtenerVideos(casoq) {
           divHijo.setAttribute('class', 'a-video2');
           titulo.setAttribute('class', 'details');
           video.setAttribute('class', 'video-contenedor2');
-          video.innerHTML = `<iframe src="https://www.youtube.com/embed/${videos[i].id.videoId}" frameborder="0" allowfullscreen></iframe>`;
-          titulo.innerHTML = `<h3>${videos[i].snippet.title}</h3`;
+          video.innerHTML = `<iframe src="https://www.youtube.com/embed/${video.id.videoId}" allowfullscreen></iframe>`;
+          titulo.innerHTML = `<h3>${video.snippet.title}</h3`;
 
           divHijo.appendChild(video);
           divHijo.appendChild(titulo);
           padre.appendChild(divHijo);
-      }
-  } catch (error) {
-      console.error('Error al cargar los videos:', error);
-  }
+        });
+    } catch (error) {
+        console.error('Error al buscar videos:', error.message);
+    }
 }
 
 function alclick(){
