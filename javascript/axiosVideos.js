@@ -19,12 +19,12 @@ async function obtenerVideos(casoq) {
         videos.forEach((video, index) => {          
           const divHijo = document.createElement('div');
           const titulo = document.createElement('div');
-          const video = document.createElement('div');
+          const videoDiv = document.createElement('div');
 
           divHijo.setAttribute('class', 'a-video2');
           titulo.setAttribute('class', 'details');
-          video.setAttribute('class', 'video-contenedor2');
-          video.innerHTML = `<iframe src="https://www.youtube.com/embed/${video.id.videoId}" allowfullscreen></iframe>`;
+          videoDiv.setAttribute('class', 'video-contenedor2');
+          videoDiv.innerHTML = `<iframe src="https://www.youtube.com/embed/${video.id.videoId}" allowfullscreen></iframe>`;
           titulo.innerHTML = `<h3>${video.snippet.title}</h3`;
 
           divHijo.appendChild(video);
