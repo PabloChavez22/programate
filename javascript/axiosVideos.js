@@ -5,7 +5,7 @@ const r2 = 'css';
 const r3 = 'javascript';
 
 async function obtenerVideos(casoq) {
-    const tipo = casoq;
+    const tipo = "html";//casoq
     const cantidadVideos = 3;
 
     try {
