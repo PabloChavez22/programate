@@ -57,7 +57,7 @@ function count( al ){
   }
 }
 
-function videos(){
+function videosBuscar(){
   y++;
   console.log(y);
   if (count(y)){
