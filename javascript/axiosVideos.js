@@ -4,7 +4,9 @@ const r1 = 'html';
 const r2 = 'css';
 const r3 = 'javascript';
 const boton1 = document.getElementById("btnHtml");
-boton1.AddEventListener("click",videosBuscar);
+boton1.addEventListener("click",function(){
+  videosBuscar();
+});
 
 async function obtenerVideos(casoq) {
     const tipo = "html";//casoq
