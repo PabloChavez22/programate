@@ -3,6 +3,8 @@ var y= 0,j=0,k=0;
 const r1 = 'html';
 const r2 = 'css';
 const r3 = 'javascript';
+let boton1 = document.getElementById("btnHtml");
+boton1.AddEventListener("click",obtnenerVideos('html'));
 
 async function obtenerVideos(casoq) {
     const tipo = "html";//casoq
@@ -20,7 +22,7 @@ async function obtenerVideos(casoq) {
           const divHijo = document.createElement('div');
           const titulo = document.createElement('div');
           const videoDiv = document.createElement('div');
-          const padre = document.querySelector('cuadro-contenedor');
+          const padre = document.querySelector('.cuadro-contenedor');
 
           divHijo.setAttribute('class', 'a-video2');
           titulo.setAttribute('class', 'details');
