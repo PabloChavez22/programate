@@ -20,19 +20,24 @@ async function obtenerVideos(casoq) {
           const divHijo = document.createElement('div');
           const titulo = document.createElement('div');
           const videoDiv = document.createElement('div');
+          const padre = document.querySelector('cuadro-contenedor');
 
           divHijo.setAttribute('class', 'a-video2');
           titulo.setAttribute('class', 'details');
           videoDiv.setAttribute('class', 'video-contenedor2');
           videoDiv.innerHTML = `<iframe src="https://www.youtube.com/embed/${video.id.videoId}" allowfullscreen></iframe>`;
-          titulo.innerHTML = `<h3>${video.snippet.title}</h3`;
+          titulo.innerHTML = `<h3>${video.snippet.title}</h3>`;
 
-          divHijo.appendChild(video);
+          divHijo.appendChild(videoDiv);
           divHijo.appendChild(titulo);
           padre.appendChild(divHijo);
         });
-    } catch (error) {
-        console.error('Error al buscar videos:', error.message);
+    } catch (networkError) {
+        console.error('Error de red:', networkError);
+    }catch (apiError) {
+        console.error('Error en la API:',apiError);
+    }catch (otherError){
+        console.error('Otro error:',otherError);
     }
 }
 
