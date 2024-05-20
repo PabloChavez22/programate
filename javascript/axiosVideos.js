@@ -3,8 +3,8 @@ var y= 0,j=0,k=0;
 const r1 = 'html';
 const r2 = 'css';
 const r3 = 'javascript';
-let boton1 = document.getElementById("btnHtml");
-boton1.AddEventListener("click",obtnenerVideos('html'));
+const boton1 = document.getElementById("btnHtml");
+boton1.AddEventListener("click",videosBuscar);
 
 async function obtenerVideos(casoq) {
     const tipo = "html";//casoq
@@ -36,10 +36,12 @@ async function obtenerVideos(casoq) {
         });
     } catch (networkError) {
         console.error('Error de red:', networkError);
-    }catch (apiError) {
-        console.error('Error en la API:',apiError);
+    }catch (APIError) {
+        console.error('Error en la API:',APIError);
     }catch (otherError){
         console.error('Otro error:',otherError);
+    }catch (error) {
+        console.error('Error completo',error);
     }
 }
 
