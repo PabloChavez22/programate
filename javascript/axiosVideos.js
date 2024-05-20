@@ -36,12 +36,8 @@ async function obtenerVideos(casoq) {
           divHijo.appendChild(titulo);
           padre.appendChild(divHijo);
         });
-    } catch (networkError) {
-        console.error('Error de red:', networkError);
-    }catch (otherError){
-        console.error('Otro error:',otherError);
     }catch (error) {
-        console.error('Error a depuracion:', err.stack);
+        console.error('Error a depuracion:', error.stack);
     }
 }
 
