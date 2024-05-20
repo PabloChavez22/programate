@@ -52,7 +52,7 @@ function alclick(){
   container.appendChild(blocke);
 }
 
-function count( al ){
+function count( al ) {
   if( al > 2 ){
     alclick();
     const botonero = document.querySelector('.caja-button-centrado');
@@ -60,12 +60,13 @@ function count( al ){
     console.log("pasa por aca");
     return true;
   }
+    return false;
 }
 
-function videosBuscar(){
+function videosBuscar() {
   y++;
   console.log(y);
-  if (count(y)){
+  if (count(y)) {
     console.log("fue al if");
     return;
   }else{
