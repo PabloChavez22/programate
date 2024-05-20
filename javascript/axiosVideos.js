@@ -38,8 +38,6 @@ async function obtenerVideos(casoq) {
         });
     } catch (networkError) {
         console.error('Error de red:', networkError);
-    }catch (APIError) {
-        console.error('Error en la API:',APIError);
     }catch (otherError){
         console.error('Otro error:',otherError);
     }catch (error) {
