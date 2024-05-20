@@ -43,7 +43,7 @@ async function obtenerVideos(casoq) {
     }catch (otherError){
         console.error('Otro error:',otherError);
     }catch (error) {
-        console.error('Error completo',error);
+        console.error('Error a depuracion:', err.stack);
     }
 }
 
