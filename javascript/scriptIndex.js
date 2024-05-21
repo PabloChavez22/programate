@@ -1,59 +1,87 @@
 /**********button****************/
 
-function alDarClick (){
-    
-    const elementPadre = document.getElementById('contenido-html');
-    const bottonPadre = document.getElementById('botton-padre');
+const identificador = ["#contenido-html","#contenido-css","#contenido-js"];
+const videos = [
+    {
+        src : "https://www.youtube.com/embed/DxumDNXRtpI?si=XQmI-4QTFRybQ-3y",/*aca html */
+        titulo : "Curso de HTML5 esencial - Estructura (header y más)"
+    },{
+        src : "https://www.youtube.com/embed/Arlyf01AJAI?si=4GGoD2OdAT1fEdSq" ,
+        titulo : "CURSO de HTML5 desde CERO 2021 - #62 - Etiqueta video"
+    },{
+        src : "https://www.youtube.com/embed/iEgusLwvTZE?si=THwQJi-WCghPNgNM",
+        titulo : "❤ ¿Qué es Etiqueta H1, H2, H3, H4, H5, H6 en HTML? 👉 Curso de HTML5"
+    },{
+        src : "https://www.youtube.com/embed/EVBlLkfh2V0?si=PIALgp3A8tmVk88T",/*aca empieza css*/
+        titulo : "GUÍA COMPLETA DE FLEXBOX ANIMADA | CSS"
+    },{
+        src : "https://www.youtube.com/embed/El0OJ6h_2ZI?si=bQWV12h9_u5VM_rH",
+        titulo: "SÓLO 3 LÍNEAS: CSS Grid responsive sin media queries"
+    },{
+        src : "https://www.youtube.com/embed/zD3ioUqx9Gk?si=-VCKLWzzJmjVMZqd",
+        titulo : "Imagen de fondo en CSS para tu Página Landing 😎"
+    },{/**aca js los 3 a cargar */
+        src : "https://www.youtube.com/embed/-mNp3-UX9Qc?si=roLda2xC3P7UW6iy",
+        titulo : "Accediendo a un documento iframe (contentWindow) - Tutorial de JavaScript"
+    },{
+        src : "https://www.youtube.com/embed/Yk1KfoAwbug?si=IEYE-AsAqJdTVuit",
+        titulo : "5 PRO TIPS para escribir código en JavaScript"
+    },{
+        src : "https://www.youtube.com/embed/bSHitSCqWr8?si=hY2FhtbKDjggEt9R",
+        titulo : "Efecto de Escritura (ANIMADA) con JAVASCRIPT | Fácil"
+    }
+];
 
-    //creo nodos.
-    const etA = document.createElement('a');
-    const etB = document.createElement('a');
-    const etC = document.createElement('a');
+function agregarVideo(inicio, fin, este){
+    const contenedorPadre = document.querySelector(este);
+    for(let i = inicio; i <= fin ; i++){
+        
+        //creo nodos.
+        const hijo = document.createElement('div');
+        const videoHijo = document.createElement('div');
+        const tituloHijo = document.createElement('div');
+        
+        //atributos
+        hijo.setAttribute('class', 'a-video2');
+        tituloHijo.setAttribute('class', 'details');
+        videoHijo.setAttribute('class', 'video-contenedor2');
 
-    etA.innerHTML = '<div class="video-contenedor"><div class="cuadro-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/kUMe1FH4CHE?si=BhPNqLgqLnCeMSbV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="details"><h3>Learn HTML – Full Tutorial for Beginners (2022)</h3></div></div>';
-    etB.innerHTML = '<div class="video-contenedor"><div class="cuadro-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/FQdaUv95mR8?si=HycrJFVti7zghje8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="details"><h3>HTML Tutorial for Beginners</h3></div></div>';
-    etC.innerHTML = '<div class="video-contenedor"><div class="cuadro-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/mU6anWqZJcc?si=aXt0qOI5gB1a0cVM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="details"><h3>Learn HTML5 and CSS3 From Scratch - Full Course</h3></div></div>';
-    
-    //agrego nodos.
-    elementPadre.appendChild(etA);
-    elementPadre.append(etB,etC);
-
-    //atributos
-    etA.setAttribute('class', 'a-video');
-    etB.setAttribute('class', 'a-video');
-    etC.setAttribute('class', 'a-video');
-
-    bottonPadre.classList.add("ocultos");
-    bottonPadre.classList.remove("caja-button-centrado");
+        videoHijo.innerHTML = '<iframe src="'+videos[i].src+'" title="YouTube video player" frameborder="0" allowfullscreen></iframe>';
+        tituloHijo.innerHTML = '<h3>'+videos[i].titulo+'</h3>';
+        
+        //agrego nodos.
+        hijo.appendChild(videoHijo);
+        hijo.appendChild(tituloHijo);
+        contenedorPadre.appendChild(hijo);
+    }
+    switch(este){
+        case identificador[0]:
+            const b1 = document.querySelector('#bhtml');
+            const b11 = document.querySelector('#bhtmll');
+            b1.setAttribute('class', 'ocultos');
+            b11.classList.remove('ocultos');
+            break;
+        case identificador[1]:
+            const b2 = document.querySelector('#bcss');
+            const b21 = document.querySelector('#bcsss');
+            b2.setAttribute('class', 'ocultos');
+            b21.classList.remove('ocultos');
+            break;
+        case identificador[2]:
+            const b3 = document.querySelector('#bjs');
+            const b31 = document.querySelector('#bjss');
+            b3.setAttribute('class', 'ocultos');
+            b31.classList.remove('ocultos');
+            break;
+        default: 
+            break;
+    }
 }
-
-const btnC = document.querySelector("#button-js");
-const elementPadre3 = document.querySelector("#contenido-jscript");
-const bottonPadre3 = document.querySelector("#botton-padre1");
-//creo nodos.
-const etU = document.createElement('a');
-const etV = document.createElement('a');
-const etW = document.createElement('a');
-
-
-btnC.addEventListener('click',function(){
-    etU.innerHTML = '<div class="video-contenedor"><div class="cuadro-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/2SetvwBV-SU?si=McXco9G64tSCEZWk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="details"><h3>Curso JavaScript: 1. Introducción - #jonmircha</h3></div></div>';
-    etV.innerHTML = '<div class="video-contenedor"><div class="cuadro-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/quJzdnXuNDc?si=U79ftuVaU_K8Epbh" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="details"><h3>How to Learn Javascript in 2023 (From ZERO)</h3></div></div>';
-    etW.innerHTML = '<div class="video-contenedor"><div class="cuadro-video"><iframe width="400" height="225" src="https://www.youtube.com/embed/c-I5S_zTwAc?si=9ITFIcfm1RM4WPZg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><div class="details"><h3>Learn JAVASCRIPT in just 5 MINUTES (2020)</h3></div></div>';
-    //agrego nodos.
-    elementPadre3.append(etU,etV,etW);
-    //atributos
-    etU.setAttribute('class', 'a-video');
-    etV.setAttribute('class', 'a-video');
-    etW.setAttribute('class', 'a-video');
-
-    bottonPadre3.classList.add("ocultos");
-    bottonPadre3.classList.remove("caja-button-centrado");
-});
-//mientras veo como utilizar la api de youtube.
+//Implementada la api de youtube en pages.
 
 /*******************publicidad**************************/
-setTimeout(function () {
-    const publicidad = document.querySelector('#publicidad-page');
-    publicidad.classList.add("ocultos");
-},9000);
+
+function clickPublicidad(){
+    const publicidad1 = document.querySelector('.publicidad-registrarse');
+    publicidad1.setAttribute('class', 'ocultos');
+}
