@@ -38,6 +38,16 @@ async function obtenerVideos(casoq) {
         });
     }catch (error) {
         console.error('Error a depuracion:', error.stack);
+          if (error.response) {
+          // El servidor respondió con un código de estado que está fuera del rango de 2xx
+          console.error('Error de respuesta del servidor:', error.response.data);
+        } else if (error.request) {
+          // La solicitud fue hecha pero no hubo respuesta
+          console.error('No se recibió respuesta del servidor:', error.request);
+        } else {
+          // Algo sucedió al configurar la solicitud
+          console.error('Error al configurar la solicitud:', error.message);
+        }
     }
 }
 
