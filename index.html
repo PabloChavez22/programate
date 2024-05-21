@@ -115,86 +115,140 @@
         <main id="miMain" class="close">
             <!--completar añadir section y contenido-->
             <!--cada section tiene su propio css a añadir-->
-            <section id="publicidad-page">
-                 <a href="./pages/account.html" style="display: flex; flex-direction: column;"><img src="./static/img/publicidad.jpg" alt="publicidad de registrarse"></a>
-            </section>
-            <section>
+            <div class="publicidad-registrarse">       <!--nuevo div para publicidad con boton para cerrar //elimine el otro-->
+                <button type="button" class="publicidad-boton" onclick="clickPublicidad()">X</button>
+            </div>
+
+            <section>                       <!--sobre html-->
                  <h2>Aprende HTML</h2>
                 <div class="cuadro-contenedor" id="contenido-html">
-                    <a class="a-video" href="">
-                        <div class="video-contenedor">
-                            <div class="cuadro-video">
-                                    <iframe width="400" height="225" src="https://www.youtube.com/embed/MJkdaVFHrto?si=3HcmXNHSRIRvOOpC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <div class="details">
-                                <h3>Aprende HTML ahora! curso completo GRATIS desde cero</h3>
-                            </div>
-                        </div>                            
-                    </a>
-                    <a class="a-video" href="">
-                        <div class="video-contenedor">
-                            <div class="cuadro-video">
-                                <iframe width="400" height="225" src="https://www.youtube.com/embed/kN1XP-Bef7w?si=qDkSE--_vULsnjiC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <div class="details">
-                                <h3>Curso de HTML5 desde CERO (Completo)</h3>
-                            </div>
+
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/2O8pkybH6po?si=DU1oZya8GlVhEJc-" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
                         </div>
-                    </a>
-                    <a class="a-video" href="">
-                        <div class="video-contenedor">
-                            <div class="cuadro-video">
-                                <iframe width="400" height="225" src="https://www.youtube.com/embed/mNbnV3aN3KA?si=eSsPEU9e_u8rFcGr" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <div class="details">
-                                <h3>Aprende HTML en 15 Minutos 📙</h3>
-                            </div>
+                        <div class="details">
+                            <h3>Learn HTML forms in 8 minutes 📝</h3>
                         </div>
-                    </a>
+                    </div>
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/3guAdnFjX0A?si=UahEELuEouQ3nKOm" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>Clase 2-Introducción a HTML-Comisión 24160</h3>
+                        </div>
+                    </div>
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/zYgWEkRN_W4?si=UsGRbhn2TIMw_q6b" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>¿Qué es Etiqueta Div HTML? 👉 Curso de HTML5</h3>
+                        </div>
+                    </div>
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/q4NAIkbg0GA?si=zVKhM5XGGvMVQTgT" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>HTML5 desde cero: diferencia entre div, section y article</h3>
+                        </div>
+                    </div>
+                    
                 </div>
                 <div class="caja-button-centrado" id="botton-padre">
-                    <button type="button" class="button-mas" onclick="alDarClick ()">Cargar mas</button>
+                    <button type="button" id="bhtml" class="button-mas" onclick=" agregarVideo(0, 2, identificador[0])">Cargar mas</button>
+                    
+                    <div id="bhtmll" class="ocultos button-mas"><a class=""style="text-decoration:none; color:black; line-height:1.5rem"  href="#">Ver mas</a></div>
+                </div>
+            </section>
+
+            <section> <!--sobre css-->
+                <h2>Aprende CSS</h2>
+                <div class="cuadro-contenedor" id="contenido-css">
+
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/nMYM5_svGLM?si=vZKDoJ0WjAN29ggW" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>Responsive Flexbox Layout in 2 Minutes</h3>
+                        </div>
+                    </div>
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/UHlTlY_yKhA?si=xAYUJ6P3E9gOaff5" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>Clase 5-Introducción a CSS-Comisión 24160</h3>
+                        </div>
+                    </div>
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/4WlOokagtR4?si=OaZVFLwHwwecccLL" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>CSS POSITION relative y absolute (GUÍA DEFINITIVA) 🎨</h3>
+                        </div>
+                    </div>
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/LIDEoGCfcGw?si=gZ6CxZQ-ExjxHuzu" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>CSS3 - Como usar la propiedad background-size</h3>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="caja-button-centrado" id="">
+                    <button type="button" id="bcss" class="button-mas" onclick=" agregarVideo(3, 5, identificador[1])">Cargar mas</button>
+                    <div id="bcsss" class="ocultos button-mas"><a class=""style="text-decoration:none; color:black; line-height:1.5rem"  href="#">Ver mas</a></div>
                 </div>
             </section> 
-            <section>
-                 <h2>Aprende CSS</h2>
-            </section> 
-            <section>
-                 <h2>Aprende Javascript</h2>
-                <div class="cuadro-contenedor" id="contenido-jscript">
-                    <a class="a-video" href="">
-                        <div class="video-contenedor">
-                            <div class="cuadro-video">
-                                <iframe width="400" height="225" src="https://www.youtube.com/embed/odnLWsAe3lM?si=ApMDmmpoFR0uKKMM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <div class="details">
-                                <h3>Javascript en dos minutos</h3>
-                            </div>
-                        </div>                            
-                    </a>
-                    <a class="a-video" href="">
-                        <div class="video-contenedor">
-                            <div class="cuadro-video">
-                                <iframe width="400" height="225" src="https://www.youtube.com/embed/8GTaO9XhA5M?si=Z58P2mi4EtErLb0D" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <div class="details">
-                                <h3>Aprende JavaScript en 10 minutos 👨‍💻</h3>
-                            </div>
-                        </div>                            
-                    </a>
-                    <a class="a-video" href="">
-                        <div class="video-contenedor">
-                            <div class="cuadro-video">
-                                <iframe width="400" height="225" src="https://www.youtube.com/embed/x5YUu0eUc8s?si=cR_EwGdL-v1kQpXa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                            </div>
-                            <div class="details">
-                                <h3>👩🏻‍💻 ¿Qué es JAVASCRIPT? | 🚀 ARMÁ TU PRIMER PROGRAMA | ⭐ Curso JAVASCRIPT DESDE CERO #1</h3>
-                            </div>
-                        </div>                            
-                    </a>
+
+            <section> <!--sobre js-->           
+                <h2>Aprende Javascript</h2>
+                <div class="cuadro-contenedor" id="contenido-js">
+
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/e3EyqGnb6XM?si=iOo4QuX25VG8GYLs" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>Funciones en Javascript | Parámetros y Return [Con Ejemplos]</h3>
+                        </div>
+                    </div>
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/KHcE7nMGDKc?si=k0RpZmM-kC5IyP-7" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>Clase 13-Introducción a JS-Comisión 24160</h3>
+                        </div>
+                    </div>
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/J6is5xEqo_Y?si=RGK3ZMgR98SN7urq" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>✅ ¿Cómo crear un botón activo utilizando HTML / CSS y JS? | Tutorial para principiantes</h3>
+                        </div>
+                    </div>
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/BxGRts-WLgM?si=I0xWJA8e8zuAgplk" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>🟧 Métodos de ARRAYS en JAVASCRIPT | ⭐ Curso JAVASCRIPT DESDE CERO 🚀 #22</h3>
+                        </div>
+                    </div>
+                    
                 </div>
-                <div class="caja-button-centrado" id="botton-padre1">
-                    <button type="button" id="button-js" class="button-mas">Cargar mas</button>
+                <div class="caja-button-centrado" id="">
+                    <button type="button" id="bjs" class="button-mas" onclick=" agregarVideo(6, 8, identificador[2])">Cargar mas</button>
+                    <div id="bjss" class="ocultos button-mas"><a class=""style="text-decoration:none; color:black; line-height:1.5rem"  href="#">Ver mas</a></div>
                 </div>
             </section> 
         </main>
