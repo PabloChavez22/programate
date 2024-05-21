@@ -4,20 +4,7 @@ const r1 = 'html';
 const r2 = 'css';
 const r3 = 'javascript';
 
-const boton1 = document.getElementById("btnHtml");
-boton1.addEventListener("click",function(){
-  videosBuscar(r1);
-});
-
-const boton2 = document.getElementById("btnCss");
-boton1.addEventListener("click",function(){
-  videosBuscar(r2);
-});
-
-const boton3 = document.getElementById("btnJs");
-boton1.addEventListener("click",function(){
-  videosBuscar(r3);
-});
+/*elimine const de aca*/
 
 async function obtenerVideos(casoq) {
     const tipo = casoq;//casoq
