@@ -50,7 +50,7 @@ async function obtenerVideos(casoq) {
 }
 
 function alclick(){
-  const container = document.getElementById('videoContainer');
+  const container = document.querySelector('.cuadro-contenedor');
 
   const blocke = document.createElement('a');
   blocke.setAttribute('href','https://ar.linkedin.com/in/pablo-chavez-developer');
