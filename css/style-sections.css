@@ -119,7 +119,7 @@ section h2{
 /************************publicidad***************************************/
 
 .publicidad-registrarse {
-    background-image: url(../publicidad.jpg);
+    background-image: url(../static/img/publicidad.jpg);
     display: flex;
     flex-direction: row-reverse;
     height: 18rem;
