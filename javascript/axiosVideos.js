@@ -1,15 +1,26 @@
 
-var y= 0,j=0,k=0;
+var y= 0,j=0,k=0;/*fijarse si con y es suficiente.*/
 const r1 = 'html';
 const r2 = 'css';
 const r3 = 'javascript';
+
 const boton1 = document.getElementById("btnHtml");
 boton1.addEventListener("click",function(){
-  videosBuscar();
+  videosBuscar(r1);
+});
+
+const boton2 = document.getElementById("btnCss");
+boton1.addEventListener("click",function(){
+  videosBuscar(r2);
+});
+
+const boton3 = document.getElementById("btnJs");
+boton1.addEventListener("click",function(){
+  videosBuscar(r3);
 });
 
 async function obtenerVideos(casoq) {
-    const tipo = "html";//casoq
+    const tipo = casoq;//casoq
     const cantidadVideos = 3;
 
     try {
@@ -55,7 +66,7 @@ function alclick(){
   const container = document.getElementById('videoContainer');
 
   const blocke = document.createElement('a');
-  blocke.setAttribute('href','https://www.google.com/');
+  blocke.setAttribute('href','https://ar.linkedin.com/in/pablo-chavez-developer');
   blocke.setAttribute('class','fin-videos');
   blocke.innerHTML = '<div class="fin-contenedor2" style="border: solid;display: flex;align-items: center;flex-direction: column;justify-content: center;"><h3>Lo sentimos, limite excedido.</h3><p>Para mas informacion comunicarse con el programador.</p></div><div class="details"><h3>Fin videos demostracion</h3></div>'
   
@@ -73,14 +84,14 @@ function count( al ) {
     return false;
 }
 
-function videosBuscar() {
+function videosBuscar(rta) {
   y++;
   console.log(y);
   if (count(y)) {
     console.log("fue al if");
     return;
   }else{
-    obtenerVideos(r1);
+    obtenerVideos(rta);
     console.log("paso else");
   }
   
