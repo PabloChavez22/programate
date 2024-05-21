@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="../css/style-menu.css">
+
+        <link rel="stylesheet" type="text/css" href="../css/style-sections.css">
+        <link rel="stylesheet" type="text/css" href="../css/style-color-letra.css">
+        <title>Programate - sobre js</title>
+
+        <script src="https://kit.fontawesome.com/8fa71a03bd.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="nav_menu">
+                <!--navegador-->
+                <div class="icon-menu" onclick="menu_function()">
+                    <i class="fa-solid fa-bars icon-menu-li"></i>
+                </div>
+                <nav id="menu_header" class="menu_header close">
+                    <ul>
+                        <li>
+                            <a class="menu_option close" href="../index.html">
+                                <div class="icono">
+                                    <i class="fa-solid fa-house-chimney icon-menu-li close menu-js"></i>
+                                </div>
+                                <span class="menu-js">Principal</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu_option close" href="#">
+                                <div class="icono">
+                                    <i class="fa-brands fa-html5 icon-menu-li close menu-js"></i>
+                                </div>
+                                <span class="menu-js">HTML</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu_option close" href="#">
+                                <div class="icono">
+                                    <i class="fa-brands fa-css3-alt icon-menu-li close menu-js"></i>
+                                </div>
+                                <span class="menu-js">CSS</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="menu_option close" href="#">
+                                <div class="icono">
+                                    <i class="fa-brands fa-js icon-menu-li close menu-js"></i>
+                                </div>
+                                <span class="menu-js">JavaScript</span>
+                            </a>
+                        </li>
+                        
+                        <li id="nav-sesion" class="close">
+                            <span class="texto">Accede para realizar comentarios y guardar tu playlist.</span>
+                            <a href="./pages/account.html" class="sesion-botton">
+                                <div class="icono-sesion">
+                                    <i class="fa-regular fa-user"></i>
+                                </div>
+                                <span class="">Acceder</span>
+                            </a>
+                        </li>
+<!--terminar de arreglar programadores-->
+                        <li id="nav-programadores" class="close">
+                            <span class="texto">Programadores</span>
+                            <a href="#" class="menu_option close">
+                                <i class="fa-brands fa-linkedin icono"></i>
+                                <span class="">Cecilia</span>
+                            </a>
+                            <a href="#" class="menu_option close">
+                                <i class="fa-brands fa-linkedin icono"></i>
+                                <span class="">Jesus</span>
+                            </a>
+                            <a href="https://ar.linkedin.com/in/pablo-chavez-developer" class="menu_option close  ok">
+                                <i class="fa-brands fa-linkedin icono"></i>
+                                <span class="">Pablo</span>
+                            </a>
+                            <a href="#" class="menu_option close">
+                                <i class="fa-brands fa-linkedin icono"></i>
+                                <span class="">Axel</span>
+                            </a>
+                        </li>
+
+                        <li id="miFooter" class="close">
+                            <span class="texto">&#169; 2024 Programate.</span>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="titulo-header">
+                <!--titulo-->
+                <a class="titulo" href="../index.html">
+                    <h2>Progra</h2>
+                    <img class="logoMate" src="../static/img/logoMate.jpg" alt="mate">
+                </a>
+                
+            </div>
+            <div class="sesion">
+                <!--inicio sesion-->
+                <a href="./pages/account.html" class="sesion-botton">
+                    <div class="icono-sesion">
+                        <i class="fa-regular fa-user"></i>
+                    </div>
+                    <span class="">Acceder</span>
+                </a>
+            </div>
+        </header>
+        <main id="miMain" class="close">
+            <section id="videos-container">
+                 <h2>Aprende JavaScript</h2>
+                <div class="cuadro-contenedor">
+
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/bSHitSCqWr8?si=hY2FhtbKDjggEt9R" title="YouTube video player" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>Efecto de Escritura (ANIMADA) con JAVASCRIPT | Fácil</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="a-video2">
+                        <div class="video-contenedor2" >
+                            <iframe src="https://www.youtube.com/embed/BxGRts-WLgM?si=I0xWJA8e8zuAgplk" title="YouTube video player" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>🟧 Métodos de ARRAYS en JAVASCRIPT | ⭐ Curso JAVASCRIPT DESDE CERO 🚀 #22</h3>
+                        </div>
+                    </div>
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/Yk1KfoAwbug?si=IEYE-AsAqJdTVuit" title="YouTube video player" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>5 PRO TIPS para escribir código en JavaScript</h3>
+                        </div>
+                    </div>
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/e3EyqGnb6XM?si=iOo4QuX25VG8GYLs" title="YouTube video player" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>Funciones en Javascript | Parámetros y Return [Con Ejemplos]</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/bSHitSCqWr8?si=hY2FhtbKDjggEt9R" title="YouTube video player" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>Efecto de Escritura (ANIMADA) con JAVASCRIPT | Fácil</h3>
+                        </div>
+                    </div>
+
+                    <div class="a-video2">
+                        <div class="video-contenedor2">
+                            <iframe src="https://www.youtube.com/embed/J6is5xEqo_Y?si=RGK3ZMgR98SN7urq" title="YouTube video player" allowfullscreen></iframe>
+                        </div>
+                        <div class="details">
+                            <h3>✅ ¿Cómo crear un botón activo utilizando HTML / CSS y JS? | Tutorial para principiantes</h3>
+                        </div>
+                    </div>
+
+                    
+                </div>
+
+                <div class="caja-button-centrado">
+                    <button  class="button-mas" id="btnJs">Cargar mas</button>         <!--el id manda q tipo de video-->
+                </div>
+            </section> 
+           
+        </main>
+        <!--footer en el nav menu-->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> <!--instalo axios-->
+        <script src="../javascript/script.js"></script>
+        <script src="../javascript/axiosVideos.js"></script>
+    </body>
+</html>
