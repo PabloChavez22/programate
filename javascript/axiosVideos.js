@@ -1,7 +1,7 @@
 
 var y= 0,j=0,k=0;/*fijarse si con y es suficiente.*/
 const r1 = 'html';
-const r2 = 'css';
+const r2 = 'solo+css';
 const r3 = 'javascript';
 
 /*elimine const de aca*/
