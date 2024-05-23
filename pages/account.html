@@ -29,7 +29,7 @@
 
                 <div class="cuenta">
                     <!--crear formulario para inicio sesion-->
-                    <form action="" class="ingresar" id="inicio-sesion">
+                    <form method="get" enctype="text/plain" class="ingresar" id="inicio-sesion">
                         <div class="user">
                             <i class="fa-regular fa-user"></i>
                         </div>
@@ -45,7 +45,7 @@
                 
                 <div class="caja_formulario oculto">
                     <!--aca agregar el formulario-->
-                    <form action="" id="crear-cuenta" class="datos-form">
+                    <form method="get" enctype="text/plain" id="crear-cuenta" class="datos-form">
                         <fieldset class="datos-form">
                             <legend>Datos personales</legend>
                         
@@ -58,7 +58,7 @@
                             <label for="fecha-nacimiento">Ingrese fecha de nacimiento</label>
                             <input type="date" id="fecha-nacimiento" name="fecha-nacimiento" min="1900-01-01" max="2024-05-30">
                             <div class="genero">
-                                <legend>Genero</legend>
+                                <label>Genero</label>
                                 <label>F<input type="radio" name="option"></label>
                                 <label>M<input type="radio" name="option"></label>
                             </div>
@@ -73,8 +73,8 @@
                                 <label >Pais <input type="text" id="nombrePais" name="nombrePais" placeholder="Ingrese Pais..." minlength="3" maxlength="17" size="17"></label>
                             </div>
                         </fieldset>
-                        <label for="email">Ingrese su email</label>
-                        <input type="email" id="email" name="email" maxlength="27" required placeholder="example@email.com">
+                        <label for="email1">Ingrese su email</label>
+                        <input type="email" id="email1" name="email" maxlength="27" required placeholder="example@email.com">
                         
                         <label for="passw">Crear contraseña</label>
                         <input type="password" id="passw" name="passw" minlength="4" maxlength="20" required placeholder="***">
@@ -102,9 +102,48 @@
             <div class="pie">
                 <!--creacion de a (que no dirijan a ningun lugar) y volver redirija a pag.principal, completados-->
                 <a href="../index.html">volver </a>
-                <a href="#">ayuda</a>
-                <a href="#">privacidad</a>
-                <a href="#">condiciones</a>
+                <a href="#" id="ayuda2">ayuda</a>
+                <a href="#" id="privacidad2">privacidad</a>
+                <a href="#" id="condiciones2">condiciones</a>
+
+                <div id="ayuda1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="ayuda3">&times;</span>
+                        <h2>Ayuda</h2>
+                        <hr>
+                        <p>Para ingresar necesita estar registrado.</p>
+                        <p>Accede con: email y contraseña previamente creada.</p>
+                        <p>Para crear una cuenta, 'click izquierdo' en Registrarse y completar los campos.</p>
+                        <p>Para volver a pagina principal 'click izquierdo' en volver.</p>
+                        <p>Para conocer la privacidad de los datos 'click izquierdo' en privacidad.</p>
+                        <p>Para ver condiciones 'click izquierdo' en condiciones.</p>
+                        <p>Para contactar al programador ir a sección programadores en menu principal.</p>
+                    </div>
+                </div>
+                
+                <div id="privacidad1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="privacidad3">&times;</span>
+                        <h2>Privacidad</h2>
+                        <hr>
+                        <p>Esta página no almacena datos personales privados.</p>
+                        <p>Está diseñada para demostrar el manejo de html, css, js y otros.</p>
+                    </div>
+                </div>
+                
+                <div id="condiciones1" class="modal">
+                    <div class="modal-content">
+                        <span class="close" id="condiciones3">&times;</span>
+                        <h2>Condiciones de uso</h2>
+                        <hr>
+                        <p>Página diseñada para demostrar el manejo y funcionalidad de herramientas de programación.</p>
+                        <p>Nos alegra que disfrutes del diseño y las funcionalidades de nuestra web.</p>
+                        <p>Si decides inspirarte o utilizar algún elemento de nuestro sitio, nos encantaría que mencionaras al programador en reconocimiento de su trabajo.</p>
+                        <p>Un simple agradecimiento puede hacer una gran diferencia y es muy apreciado.</p>
+                        <p>¡Gracias por tu consideración y apoyo!</p>
+                    </div>
+                </div>
+
             </div>
 
         </section>
